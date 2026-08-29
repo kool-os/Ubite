@@ -21,3 +21,5 @@ jobs:
           recipe: 'recipe.yml'
           registry_token: ${{ secrets.GITHUB_TOKEN }}
           pr_event_number: ${{ github.event.number }}
+          # Tell BlueBuild explicitly to disable Cosign signature generation
+          build_opts: '--no-sign'
