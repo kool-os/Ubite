@@ -1,4 +1,3 @@
-# BlueBuild configuration for Ubite
 name: ubite
 description: My custom unverified Bazzite-deck gaming layer fork
 
@@ -11,7 +10,7 @@ modules:
       - papirus-icon-theme
       - sassc
 
-  - type: files
-    files:
-      - from-repo: themes
-        to-sys: /usr/share/themes
+  # Switch the broken copy module out for clean, raw script instructions
+  - type: containerfile
+    containerfile: |
+      COPY themes/ /usr/share/themes/
