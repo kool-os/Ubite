@@ -1,0 +1,17 @@
+# BlueBuild configuration for Ubite
+name: ubite
+description: My custom unverified Bazzite-deck gaming layer fork
+
+base-image: ghcr.io/ublue-os/bazzite-deck
+image-version: stable
+
+modules:
+  - type: rpm-ostree
+    install:
+      - papirus-icon-theme
+      - sassc
+
+  - type: files
+    files:
+      - from-repo: themes
+        to-sys: /usr/share/themes
