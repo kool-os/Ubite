@@ -10,7 +10,7 @@ modules:
       - papirus-icon-theme
       - sassc
 
-  # Switch the broken copy module out for clean, raw script instructions
+  # Correct schema structure using 'snippets:' for containerfile blocks
   - type: containerfile
-    containerfile: |
-      COPY themes/ /usr/share/themes/
+    snippets:
+      - COPY themes/ /usr/share/themes/
